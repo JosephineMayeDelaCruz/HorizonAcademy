@@ -90,7 +90,6 @@ A role-based web system for Horizon Academy that digitizes enrollment queuing, c
 
 ---
 
-## Group 4 · CCS110 Information Management 1
 
 ---
 
