@@ -1,0 +1,29 @@
+# Temporary / editor files
+*.tmp
+*.log
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# PHP error logs
+error_log
+php_errors.log
+
+# Sensitive config overrides (keep config/db.php tracked as-is for dev)
+# Uncomment below for production:
+# config/db.php
+
+# Composer (not used, but just in case)
+vendor/
+composer.lock
+
+# Database setup files — import locally, do not deploy
+schema.sql
+migration.sql
+seed_passwords.php

@@ -1,0 +1,26 @@
+Options -Indexes
+
+# Block direct access to config folder
+<FilesMatch "^(db|auth)\.php$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /horizon_academy/
+
+  # Block access to config/ directory
+  RewriteRule ^config/ - [F,L]
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# PHP session security
+php_value session.cookie_httponly 1
+php_value session.use_strict_mode 1

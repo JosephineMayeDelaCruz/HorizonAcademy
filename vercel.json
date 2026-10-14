@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.3",
+      "includeFiles": "{admin,auth,cashier,config,department,faculty,partials,registrar,student,assets}/**"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
